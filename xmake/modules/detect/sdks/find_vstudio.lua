@@ -62,8 +62,7 @@ function _load_vcvarsall(vcvarsall, vsver, arch, opt)
     file:close()
 
     -- run genvcvars.bat
-    print(genvcvars_bat)
-    os.runv("cmd", {"/C", genvcvars_bat})
+    os.run(genvcvars_bat)
 
     -- load all envirnoment variables
     local variables = {}
